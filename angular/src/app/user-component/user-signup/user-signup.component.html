@@ -1,0 +1,27 @@
+<!doctype html>
+<br><br><br>
+<div align="center">
+    <mat-card>
+
+        <form [formGroup]="form" (ngSubmit)="onSavePost()">
+            <b>SignUp</b>
+            <br>
+            <mat-form-field>
+                <input matInput type="email" formControlName="email" placeholder="Email">
+
+                <mat-error *ngIf="form.get('email').invalid ">Please Enter the Valid Email</mat-error>
+
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="password" formControlName="password" placeholder="Password"><br>
+                <mat-error *ngIf="form.get('password').invalid ">Please Enter the Correct Password</mat-error>
+
+            </mat-form-field>
+
+            <br>
+            <button mat-raised-button color="primary" type="submit">Sign Up</button>
+
+        </form>
+    </mat-card>
+</div>

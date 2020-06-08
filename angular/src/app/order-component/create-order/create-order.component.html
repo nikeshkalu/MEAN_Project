@@ -1,0 +1,32 @@
+<!-- <p>create-order works!{{id}}</p> -->
+
+<div align="center">
+    <mat-card>
+
+        <form [formGroup]="form" (ngSubmit)="onSavePost()">
+            <b>Create New Order</b>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Quantity</mat-label>
+
+                <input matInput formControlName="quantity" placeholder="quantity">
+
+                <mat-error *ngIf="form.get('quantity').invalid ">Please Enter the Quantity to be Ordered</mat-error>
+
+            </mat-form-field>
+            <br>
+            <!-- <mat-form-field appearance="outline">
+                <mat-label>Price</mat-label>
+
+                <input matInput formControlName="price" placeholder="Price"><br>
+                <mat-error *ngIf="form.get('price').invalid ">Please Enter the Valid Price</mat-error>
+
+            </mat-form-field> -->
+
+
+
+            <button mat-raised-button color="primary" type="submit ">Create Order</button>
+
+        </form>
+    </mat-card>
+</div>

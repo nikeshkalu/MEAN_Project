@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<mat-toolbar color="primary">
+
+    <a routerLink="/home"><span>{{ name }}</span></a>
+    <span class='spacer'></span>
+    <ul>
+        <li>
+            <a mat-button (click)="myOrders()">Orders</a>
+            <a mat-button (click)="myProduct()">Your Products</a>
+            <a mat-button (click)="logOut()">LogOut</a>
+
+        </li>
+    </ul>
+
+
+</mat-toolbar>

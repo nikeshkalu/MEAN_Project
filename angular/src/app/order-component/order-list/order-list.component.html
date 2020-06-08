@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+
+<mat-card class="example-card" *ngFor="let order of orderList">
+
+    <!-- <mat-card class="example-card"> -->
+
+    <mat-card-header>
+        <div mat-card-avatar class=" example-header-image "></div>
+        <mat-card-title> {{order?.productId.name}}</mat-card-title>
+    </mat-card-header>
+    <!-- <img mat-card-image src="http://localhost:3000/{{product?.productImage}} " alt=" Photo of {{product?.name}} "> -->
+    <mat-card-content>
+        <b>Quantity:</b>{{order?.quantity}}
+    </mat-card-content>
+
+    <mat-card-actions>
+
+        <button mat-raised-button color="warn" (click)="delete(order?._id)">Delete</button>
+
+    </mat-card-actions>
+    <br>
+
+</mat-card>

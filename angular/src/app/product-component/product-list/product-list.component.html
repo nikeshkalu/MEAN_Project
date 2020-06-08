@@ -1,0 +1,24 @@
+<br>
+<br>
+<mat-card class="example-card" *ngFor="let product of productList">
+
+    <mat-card-header>
+        <div mat-card-avatar class=" example-header-image "></div>
+        <mat-card-title>{{product?.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="http://localhost:3000/{{product?.productImage}} " alt=" Photo of {{product?.name}} ">
+    <mat-card-content>
+        <b>Price:</b>{{product?.price}}
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="showName(product?._id)">Details</button>
+        <button mat-raised-button color="primary" (click)="sendProductId(product?._id)">Orders</button>
+        <!-- <button mat-button (click)="delete(product?._id)">Delete</button> -->
+        <button mat-raised-button color="primary" routerLink="../products/update">Update</button>
+
+
+    </mat-card-actions>
+    <br>
+
+</mat-card>
