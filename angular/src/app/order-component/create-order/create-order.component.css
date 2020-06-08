@@ -1,0 +1,24 @@
+mat-card {
+    width: 30%;
+    align-content: center;
+}
+
+.image-preview {
+    height: 5rem;
+    margin: 1rem 0;
+}
+
+.image-preview img {
+    height: 100%;
+}
+
+.example-card {
+    max-width: 400px;
+    margin: 15px;
+    float: left;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}

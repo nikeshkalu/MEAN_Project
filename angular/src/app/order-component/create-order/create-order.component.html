@@ -1,15 +1,19 @@
 <!-- <p>create-order works!{{id}}</p> -->
 
 <div align="center">
+    <br><br>
     <mat-card>
 
         <form [formGroup]="form" (ngSubmit)="onSavePost()">
+            <br>
+
             <b>Create New Order</b>
             <br>
             <mat-form-field appearance="outline">
                 <mat-label>Quantity</mat-label>
 
                 <input matInput formControlName="quantity" placeholder="quantity">
+
 
                 <mat-error *ngIf="form.get('quantity').invalid ">Please Enter the Quantity to be Ordered</mat-error>
 
