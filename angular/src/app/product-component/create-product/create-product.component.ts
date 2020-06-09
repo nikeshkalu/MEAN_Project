@@ -73,4 +73,15 @@ delete(temp) {
 this.router.navigate(["../products/delete"], navigationExtras);
 }
 
+update(temp){
+  let navigationExtras: NavigationExtras = {
+    queryParams: {
+        "id": temp
+    }
+};
+console.log(temp)
+this.router.navigate(["../products/update"], navigationExtras);
+
+}
+
 }

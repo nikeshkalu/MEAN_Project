@@ -142,6 +142,7 @@ exports.product_get_product = (req, res, next) => {
 exports.product_update_product = (req, res, next) => {
     const id = req.params.productId
     const updateOps = {}
+
     for (const ops of req.body) {
         updateOps[ops.propName] = ops.value
     }
