@@ -59,5 +59,16 @@ export class ProductService {
     });
   }
 
+  updateProduct(id,formData){
+    console.log('saves')
+    
+    this.http.patch<{message:string}>('http://localhost:3000/products/'+id,formData,this.httpOptions)
+    .subscribe((responseData)=>{
+        console.log('New Product Updated')
+        this.router.navigate(["products/create"])
+ 
+    })
+  }
+
 
 }

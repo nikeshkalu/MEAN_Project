@@ -8,7 +8,7 @@
             <br>
             <mat-form-field appearance="outline">
                 <mat-label>Name</mat-label>
-                <input matInput formControlName="name" placeholder="Name" [(ngModel)]="userName">
+                <input matInput formControlName="name" placeholder="Name" [(ngModel)]="productDetail.name">
                 <mat-error *ngIf="form.get('name').invalid ">Please Enter the Valid Product Name</mat-error>
 
             </mat-form-field>
@@ -16,21 +16,21 @@
             <mat-form-field appearance="outline">
                 <mat-label>Price</mat-label>
 
-                <input matInput formControlName="price" placeholder="Price"><br>
+                <input matInput formControlName="price" placeholder="Price" [(ngModel)]="productDetail.price"><br>
                 <mat-error *ngIf="form.get('price').invalid ">Please Enter the Valid Price</mat-error>
 
             </mat-form-field>
 
 
             <br>
-
-            <!-- <div class="form-group">
+            <!-- 
+            <div class="form-group">
                 <label for="file">Upload Product Image</label><br>
                 <input type="file" id="productImage" name="productImage" (change)="handleFileInput($event.target.files) ">
             </div>
 
             <div class="image-preview">
-                <img [src]="imagePreview ">
+                <img src="http://localhost:3000/{{productDetail?.productImage}}">
             </div> -->
 
 
