@@ -11,9 +11,15 @@
     <br>
     <br>
 
-    <!-- <img mat-card-image src="http://localhost:3000/{{product?.productImage}} " alt=" Photo of {{product?.name}} "> -->
+    <img mat-card-image src="http://localhost:3000/{{order?.productId.productImage}} " alt=" Photo of {{order?.productId.productImage}} ">
     <mat-card-content>
         <b>Quantity:</b>{{order?.quantity}}
+    </mat-card-content>
+    <mat-card-content>
+        <b>Price Per Product:</b>{{order?.productId.price}}
+    </mat-card-content>
+    <mat-card-content>
+        <b>Total Price:</b>{{order?.quantity * order?.productId.price }}
     </mat-card-content>
 
     <mat-card-actions>

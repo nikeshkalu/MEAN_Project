@@ -1,7 +1,9 @@
 export interface Order{
     orders:{
         quantity : String,
-        productId:Number
+        productId:Number,
+        price : Number,
+        productImage:String
 
     }
 }

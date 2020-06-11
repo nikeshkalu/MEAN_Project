@@ -26,7 +26,7 @@ export class OrderService {
     console.log(formData)
     this.http.post<{message:string}>('http://localhost:3000/orders/',formData,this.httpOptions)
         .subscribe((responseData)=>{
-            console.log('New Product Created')
+            console.log('New Order Created')
             this.router.navigate(["orders/lists"])
      
         })
