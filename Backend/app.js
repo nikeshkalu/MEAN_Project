@@ -10,9 +10,9 @@ mongoose.Promise = global.Promise;
 const db = mongoose.connect('mongodb://localhost:27017/restApi', { useNewUrlParser: true });
 db.then(() => { console.log('Mongodb Connected'); });
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+
 app.use(cors())
+
 
 // app.use(express.bodyParser())
 app.use(morgan('dev'))
@@ -33,10 +33,15 @@ app.use((req, res, next) => {
 const productRoutes = require('./api/routes/products')
 const orderRoutes = require('./api/routes/orders')
 const userRoutes = require('./api/routes/user')
+const adminRoutes = require('./api/routes/admin.router')
 
+app.use('/admin', adminRoutes)
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 app.use('/products', productRoutes)
 app.use('/orders', orderRoutes)
 app.use('/user', userRoutes)
+
 
 app.use('/', () => {
 
